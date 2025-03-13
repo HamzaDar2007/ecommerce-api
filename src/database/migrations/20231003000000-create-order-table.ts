@@ -1,7 +1,7 @@
 // src/migrations/20231006120000-create-order-table.ts
 import { MigrationInterface, QueryRunner, Table, TableIndex } from 'typeorm';
 
-export class CreateOrderTable20231006120000 implements MigrationInterface {
+export class CreateOrderTable20231003000000 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     // Create Order Table
     await queryRunner.createTable(
@@ -71,8 +71,8 @@ export class CreateOrderTable20231006120000 implements MigrationInterface {
         foreignKeys: [
           {
             columnNames: ['user_id'],
-            referencedTableName: 'user',
-            referencedColumnNames: ['id'],
+            referencedTableName: 'users', // Updated to 'users'
+            referencedColumnNames: ['uuid'], // Updated to 'uuid'
             onDelete: 'CASCADE',
           },
         ],

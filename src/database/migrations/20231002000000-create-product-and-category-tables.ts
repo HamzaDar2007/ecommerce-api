@@ -1,7 +1,7 @@
 // src/migrations/1234567890123-create-product-and-category-tables.ts
 import { MigrationInterface, QueryRunner, Table, TableIndex } from 'typeorm';
 
-export class CreateProductAndCategoryTables1234567890123 implements MigrationInterface {
+export class CreateProductAndCategoryTables20231002000000 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     // Create Category Table
     await queryRunner.createTable(
